@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../sub_strings'
 
 describe '#substrings' do
@@ -18,13 +20,13 @@ describe '#substrings' do
   context 'when given a phrase as an empty string' do
     it 'returns an empty hash' do
       empty_str = ''
-      dic = ['the', 'and', 'because']
+      dic = %w[the and because]
       expect(substrings(empty_str, dic)).to eq({})
     end
   end
   context 'when given an empty dictionary' do
     it 'returns an empty hash' do
-      phrase = "This is a phrase."
+      phrase = 'This is a phrase.'
       empty_dic = []
       expect(substrings(phrase, empty_dic)).to eq({})
     end
