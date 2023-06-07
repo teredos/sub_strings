@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-def substrings(phrase, array)
+def substrings(phrase, dic)
   new_array = []
-  array.each do |word|
-    new_array += phrase.downcase.scan(word)
-  end
+  dic.each { |word| new_array += phrase.downcase.scan(word) }
   new_array.tally
 end
 
